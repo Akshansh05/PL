@@ -16,15 +16,15 @@ public class Lot{
  }
  ArrayList<Integer> availableSlot;
 
-HashMap<String,Car>slotCar;
+ HashMap<String,Car>slotCar;
 
-HashMap<String,String>regNOSlot;
+ HashMap<String,String>regNOSlot;
 
-HashMap<String,ArrayList<String>>colourRegNo;
+ HashMap<String,ArrayList<String>>colourRegNo;
 
 
 //createParkingLot
-public void createParkingLot(String size){
+ public void createParkingLot(String size){
     
     try {
         this.size=Integer.parseInt(size);
@@ -52,7 +52,7 @@ public void createParkingLot(String size){
 }
 
 //park
-public void park(String regNO, String colour){
+ public void park(String regNO, String colour){
 
     if(this.size == 0){
         System.out.println("Sorry, parking lot is not created");
@@ -85,7 +85,7 @@ public void park(String regNO, String colour){
 }
 
 //leave
-public void leave(String slotNo){
+ public void leave(String slotNo){
     if(this.size == 0){
         System.out.println("Sorry, parking lot is not created");
         System.out.println();
@@ -121,7 +121,7 @@ public void leave(String slotNo){
 }
 
 //status
-public void status(){
+ public void status(){
 
     if(this.size == 0){
         System.out.println("Sorry, parking lot is not created");
@@ -146,7 +146,7 @@ public void status(){
 
 
 //getRegistrationNumbersFromColor
-public void getRegistrationNumbersFromColor(String colour){
+ public void getRegistrationNumbersFromColor(String colour){
     if(this.size == 0){
         System.out.println("Sorry, parking lot is not created");
         System.out.println();
@@ -169,7 +169,7 @@ public void getRegistrationNumbersFromColor(String colour){
 }
 
 //getSlotNumbersFromColor
-public void getSlotNumbersFromColor(String colour){
+ public void getSlotNumbersFromColor(String colour){
     if(this.size == 0){
         System.out.println("Sorry, parking lot is not created");
         System.out.println();
@@ -197,5 +197,8 @@ public void getSlotNumbersFromColor(String colour){
     }
 }
 
-//
+//getSlotNumberFromRegNo
+ public void getSlotNumberFromRegNo(String regNO){
+
+}
 }
