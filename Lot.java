@@ -61,9 +61,9 @@ public void park(String regNO, String colour){
         System.out.println("Sorry, parking lot is full");
         System.out.println();
     }else{
-        Collectons.sort(availableSlot);
+        Collections.sort(availableSlot);
         String slot = this.availableSlot.get(0).toString();
-        Car car = new car(regNO,colour);
+        Car car = new Car(regNO,colour);
        
         this.slotCar.put(slot,car);
         this.regNOSlot.put(regNO,slot);
@@ -120,4 +120,82 @@ public void leave(String slotNo){
     }
 }
 
+//status
+public void status(){
+
+    if(this.size == 0){
+        System.out.println("Sorry, parking lot is not created");
+        System.out.println();
+    }else if(this.slotCar.size() > 0){
+        System.out.println("Slot No.\tRegistration No\tColour");
+        Car car;
+
+        for(int i=1;i<=this.size;i++){
+            String slotNo = Integer.toString(i);
+            if(this.slotCar.containsKey(slotNo)){
+                car=this.slotCar.get(slotNo);
+                System.out.println(i + "\t" + car.regNO + "\t" + car.colour);
+            }
+        }
+        System.out.println();       
+    }else{
+        System.out.println("Parking lot is empty");
+        System.out.println();
+    }
+}
+
+
+//getRegistrationNumbersFromColor
+public void getRegistrationNumbersFromColor(String colour){
+    if(this.size == 0){
+        System.out.println("Sorry, parking lot is not created");
+        System.out.println();
+    }else if(this.colourRegNo.containsKey(colour)){
+
+        ArrayList <String> regNOList = this.colourRegNo.get(colour);
+        System.out.println();
+        for(int i=0;i<regNOList.size();i++){
+
+            if (!(i == regNOList.size() - 1)){
+                System.out.print(regNOList.get(i) + ",");
+            }else{
+                System.out.print(regNOList.get(i));
+            }
+        }
+    }else{
+        System.out.println("Not found");
+        System.out.println();
+    }
+}
+
+//getSlotNumbersFromColor
+public void getSlotNumbersFromColor(String colour){
+    if(this.size == 0){
+        System.out.println("Sorry, parking lot is not created");
+        System.out.println();
+    }else if(this.colourRegNo.containsKey(colour)){
+
+        ArrayList<String> regNOList = this.colourRegNo.get(colour);
+        ArrayList<String> slotList = new <String> ArrayList();
+        System.out.println();
+        for(int i=0;i<regNOList.size();i++){
+            slotList.add(this.regNOSlot.get(regNOList.get(i)));
+        }
+
+        Collections.sort(slotList);
+        for(int i=0;i<slotList.size();i++){
+            if (!(i == slotList.size() - 1)) {
+                System.out.print(slotList.get(i) + ",");
+            }else{
+                System.out.print(slotList.get(i));
+            }
+        }
+        System.out.println();
+    }else{
+        System.out.println("Not found");
+        System.out.println();
+    }
+}
+
+//
 }
