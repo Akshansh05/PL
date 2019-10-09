@@ -199,6 +199,14 @@ public class Lot{
 
 //getSlotNumberFromRegNo
  public void getSlotNumberFromRegNo(String regNO){
-
+    if(this.size == 0){
+        System.out.println("Sorry, parking lot is not created");
+        System.out.println();
+    }else if(this.regNOSlot.containsKey(regNO)){
+        System.out.println(this.regNOSlot.get(regNO));
+    }else{
+        System.out.println("Not found");
+        System.out.println();
+    }
 }
 }
