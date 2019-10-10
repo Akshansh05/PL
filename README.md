@@ -22,7 +22,7 @@ java Main                    ---------------------(CLI Mode)
 
 java MainTest                -----------------------(Test File CLI Mode)
 ```
-Input for Main
+Input for Main From File
 ---------------------
 ```
 create_parking_lot 6
@@ -41,7 +41,7 @@ slot_numbers_for_cars_with_colour White
 slot_number_for_registration_number KA-01-HH-3141
 slot_number_for_registration_number MH-04-AY-1111
 ```
-Output for main
+Output for main to Console
 ---------------------
 ```
 Created a parking lot with 6 slots
@@ -77,6 +77,18 @@ KA-01-HH-1234,KA-01-HH-9999,KA-01-P-333
 1,2,4
 6
 Not found
+```
+Input for main From Console
+----------------------------
+```
+Please enter 'exit' to quit
+Waiting for input...
+create_parking_lot 6
+```
+Output for main to Console
+----------------------------
+```
+Created a parking lot with 6 slots
 ```
 Output for MainTest
 ---------------------
