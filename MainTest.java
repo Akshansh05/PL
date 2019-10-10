@@ -40,6 +40,8 @@ public class MainTest extends Main{
               
     }
     public void testLeave(String slotNo){
+       int  currenSize=lot.slotCar.size();
+     boolean status = lot.slotCar.get(slotNo) != null ? true : false;
         String value=lot.leave(slotNo);
         if(lot.size == 0 && value.equals("Sorry, parking lot is not created\n")){
             System.out.println("(test leave passed)");
@@ -48,10 +50,10 @@ public class MainTest extends Main{
         else if(Integer.parseInt(slotNo) > lot.size && value.equals("Slot Number is greater that Max size\n")){
             System.out.println("(test leave passed)");
             System.out.println();
-        }else if(lot.slotCar.size() > 0 && lot.slotCar.get(slotNo) != null && value.equals("Slot number "+slotNo+" is free\n")){
+        }else if(currenSize > 0 && (status == true) && value.equals("Slot number "+slotNo+" is free\n")){
             System.out.println("(test leave passed)");
             System.out.println();
-        }else if(lot.slotCar.size() > 0 &&lot.slotCar.get(slotNo) == null && (value.equals("No cars found at given slot\n") || value.equals("Slot number " + slotNo + " is already empty\n") )  ){
+        }else if(currenSize > 0 && (status == false) && (value.equals("No cars found at given slot\n") || value.equals("Slot number " + slotNo + " is already empty\n") )  ){
             System.out.println("(test leave passed)");
             System.out.println();
         }else{

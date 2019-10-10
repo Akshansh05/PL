@@ -114,7 +114,7 @@ Allocated slot number: 2
 
 Slot number 1 is free
 
-(test leave not passed)
+(test leave passed)
 
 Slot number 1 is already empty
 
