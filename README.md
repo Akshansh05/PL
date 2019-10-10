@@ -7,7 +7,7 @@ Project Requirements
 Build Instructions
 ----------------------------
 ```
-From the project directory (/bin/), run this command -
+From the project directory , run this command -
 
 javac Main.java              ------------------(Main File)
 javac MainTest.java          ------------------(Test File)
@@ -15,7 +15,7 @@ javac MainTest.java          ------------------(Test File)
 Running the project
 ----------------------------
 ```
-From the project directory (/bin/), run this command -
+From the project directory , run this command -
 
 java Main fileName.txt       ---------------------(input file Mode)
 java Main                    ---------------------(CLI Mode)
