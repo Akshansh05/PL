@@ -1,16 +1,19 @@
-#Project Requirements
+Project Requirements
+----------------------------
 ```
 1.Latest version of JDK.
 2.Terminal
 ```
-#Build Instructions
+Build Instructions
+----------------------------
 ```
 From the project directory (/bin/), run this command -
 
 javac Main.java              ------------------(Main File)
 javac MainTest.java          ------------------(Test File)
 ```
-#Running the project
+Running the project
+----------------------------
 ```
 From the project directory (/bin/), run this command -
 
@@ -19,7 +22,8 @@ java Main                    ---------------------(CLI Mode)
 
 java MainTest                -----------------------(Test File CLI Mode)
 ```
-#input for Main
+Input for Main
+---------------------
 ```
 create_parking_lot 6
 park KA-01-HH-1234 White
@@ -37,7 +41,8 @@ slot_numbers_for_cars_with_colour White
 slot_number_for_registration_number KA-01-HH-3141
 slot_number_for_registration_number MH-04-AY-1111
 ```
-#output for main
+Output for main
+---------------------
 ```
 Created a parking lot with 6 slots
 
@@ -73,7 +78,9 @@ KA-01-HH-1234,KA-01-HH-9999,KA-01-P-333
 6
 Not found
 ```
-#output for MainTest
+Output for MainTest
+---------------------
+```
 Sorry, parking lot is not created
 
 (test park passed)
