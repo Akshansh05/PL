@@ -23,8 +23,8 @@ public class Lot{
  HashMap<String,ArrayList<String>>colourRegNo;
 
 
-//createParkingLot
- public void createParkingLot(String size){
+ //createParkingLot
+  public void createParkingLot(String size){
     
     try {
         this.size=Integer.parseInt(size);
@@ -49,10 +49,10 @@ public class Lot{
          System.out.println("Cannot create parking Lot");
          System.out.println();
     }
-}
+ }
 
-//park
- public void park(String regNO, String colour){
+ //park
+  public void park(String regNO, String colour){
 
     if(this.size == 0){
         System.out.println("Sorry, parking lot is not created");
@@ -85,10 +85,10 @@ public class Lot{
         System.out.println();
         this.availableSlot.remove(0);
     }
-}
+ }
 
-//leave
- public void leave(String slotNo){
+ //leave
+  public void leave(String slotNo){
     if(this.size == 0){
         System.out.println("Sorry, parking lot is not created");
         System.out.println();
@@ -121,10 +121,10 @@ public class Lot{
           System.out.println("Parking lot is Empty");
           System.out.println();
     }
-}
+  }
 
-//status
- public void status(){
+ //status
+  public void status(){
 
     if(this.size == 0){
         System.out.println("Sorry, parking lot is not created");
@@ -145,11 +145,11 @@ public class Lot{
         System.out.println("Parking lot is empty");
         System.out.println();
     }
-}
+  }
 
 
-//getRegistrationNumbersFromColor
- public void getRegistrationNumbersFromColor(String colour){
+ //getRegistrationNumbersFromColor
+  public void getRegistrationNumbersFromColor(String colour){
     if(this.size == 0){
         System.out.println("Sorry, parking lot is not created");
         System.out.println();
@@ -170,10 +170,10 @@ public class Lot{
         System.out.println("Not found");
         System.out.println();
     }
-}
+  }
 
-//getSlotNumbersFromColor
- public void getSlotNumbersFromColor(String colour){
+  //getSlotNumbersFromColor
+  public void getSlotNumbersFromColor(String colour){
     if(this.size == 0){
         System.out.println("Sorry, parking lot is not created");
         System.out.println();
@@ -199,10 +199,10 @@ public class Lot{
         System.out.println("Not found");
         System.out.println();
     }
-}
+  }
 
-//getSlotNumberFromRegNo
- public void getSlotNumberFromRegNo(String regNO){
+ //getSlotNumberFromRegNo
+  public void getSlotNumberFromRegNo(String regNO){
     if(this.size == 0){
         System.out.println("Sorry, parking lot is not created");
         System.out.println();
@@ -212,6 +212,6 @@ public class Lot{
         System.out.println("Not found");
         System.out.println();
     }
-}
+ }
 
 }
