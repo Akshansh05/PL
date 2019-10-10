@@ -17,21 +17,21 @@ public  class InputParser{
         switch (inputs.length) {
             case 1:
                 try {
-                    commands.getCommand(inputString);
+                    String value = commands.getCommand(inputString);
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
                 break;
                 case 2:
                 try {
-                     commands.getCommand(inputs[0],inputs[1]);
+                    String value = commands.getCommand(inputs[0],inputs[1]);
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
                 break;
                 case 3:
                 try {
-                      commands.getCommand(inputs[0],inputs[1],inputs[2]);
+                    String value = commands.getCommand(inputs[0],inputs[1],inputs[2]);
                 } catch (Exception e) {
                     e.printStackTrace();
                 }

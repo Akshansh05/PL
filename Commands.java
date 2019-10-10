@@ -5,33 +5,37 @@ import java.lang.*;
 public  class Commands{
     Lot lot = new Lot();
 //Make Method for no parameter
-public void getCommand(String commandString){
+String value = "";
+public String getCommand(String commandString){
    if(commandString.equalsIgnoreCase("status")){                
-        lot.status();
+     this.value = lot.status();
    }
+   return this.value;
 }
 //Make Method for 1 parameter
-public void getCommand(String commandString,String para){
+public String getCommand(String commandString,String para){
    if(commandString.equalsIgnoreCase("create_parking_lot")){
-        lot.createParkingLot(para);
+     this.value = lot.createParkingLot(para);
    }
    if(commandString.equalsIgnoreCase("leave")){
-        lot.leave(para);
+     this.value = lot.leave(para);
    }
    if(commandString.equalsIgnoreCase("registration_numbers_for_cars_with_colour")){
-        lot.getRegistrationNumbersFromColor(para);
+     this.value = lot.getRegistrationNumbersFromColor(para);
    }
    if(commandString.equalsIgnoreCase("slot_numbers_for_cars_with_colour")){
-        lot.getSlotNumbersFromColor(para);
+     this.value = lot.getSlotNumbersFromColor(para);
    }
    if(commandString.equalsIgnoreCase("slot_number_for_registration_number")){
-        lot.getSlotNumberFromRegNo(para);
+     this.value = lot.getSlotNumberFromRegNo(para);
    }
+   return this.value;
 }
 //Make Method for 2 parameters
-public void getCommand(String commandString,String para1,String para2){
+public String getCommand(String commandString,String para1,String para2){
     if(commandString.equalsIgnoreCase("park")){
-        lot.park(para1,para2);
+     this.value = lot.park(para1,para2);
     }
+    return this.value;
 }
 }
