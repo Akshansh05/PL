@@ -2,7 +2,7 @@ import java.util.*;
 
 public class Lot{
 
- int size=0;
+ int size;
  
  //Car class
  public class Car{
@@ -56,6 +56,9 @@ public class Lot{
 
     if(this.size == 0){
         System.out.println("Sorry, parking lot is not created");
+        System.out.println();
+    }else if (this.regNOSlot.containsKey(regNO)){
+        System.out.println("Sorry, car is already parked");
         System.out.println();
     }else if(this.slotCar.size() == size){
         System.out.println("Sorry, parking lot is full");
@@ -127,7 +130,7 @@ public class Lot{
         System.out.println("Sorry, parking lot is not created");
         System.out.println();
     }else if(this.slotCar.size() > 0){
-        System.out.println("Slot No.\tRegistration No\tColour");
+        System.out.println("Slot No.   Registration No   Colour");
         Car car;
 
         for(int i=1;i<=this.size;i++){
@@ -162,6 +165,7 @@ public class Lot{
                 System.out.print(regNOList.get(i));
             }
         }
+       System.out.println(); 
     }else{
         System.out.println("Not found");
         System.out.println();
@@ -209,4 +213,5 @@ public class Lot{
         System.out.println();
     }
 }
+
 }
